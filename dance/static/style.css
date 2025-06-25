@@ -1,0 +1,81 @@
+/* filepath: e:\tutorial\dance\static\style.css */
+@import url('https://fonts.googleapis.com/css2?family=Jolly+Lodger&family=Playwrite+DK+Loopet:wght@100..400&family=Tagesschrift&display=swap');
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+#navbar {
+    width: 100%;
+}
+
+#navbar ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 10px 30px;
+    background-color: #333;
+    opacity: 0.9;
+    color: white;
+}
+
+#navbar ul li {
+    list-style: none;
+    transition: all 0.8s ease-in-out;
+}
+
+#navbar ul li a {
+    text-decoration: none;
+    padding: 10px 40px;
+}
+
+#navbar ul li:hover {
+    background-color: #fdfdfd;
+    color: black;
+    border-radius: 10px;
+    transform: scale(1.2);
+    cursor: pointer;
+}
+
+#introsection {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 400px;
+    width: 100%;
+    color: black;
+    z-index: 1;
+    font-size: 5rem;
+    font-family: "Jolly Lodger", system-ui;
+    font-weight: 400;
+    font-style: normal;
+}
+
+#introsection::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: url('../static/img/dance.jpg') no-repeat center center / cover;
+    opacity: 0.6;
+    z-index: -1;
+}
+
+#sponsor {
+    background-color: red;
+    border: 2px solid yellow;
+    height: 500px;
+}
+
+footer {
+    background-color: blue;
+    border: 2px solid brown;
+    height: 500px;
+}
