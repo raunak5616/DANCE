@@ -26,6 +26,8 @@
     font-family: "Jolly Lodger", system-ui;
     font-weight: lighter;
     font-size: 24px;
+    color: white;
+    text-shadow:  5px 5px 10px rgba(0, 0, 0, 0.5);
 }
 #navbar ul {
     display: flex;
@@ -89,13 +91,18 @@
 
 #mission {
     font-size: 1.5rem;
+    font-weight: 100;
     padding: 12px;
     text-align: center;
-    font-family: 'Courier New', Courier, monospace;
-    height: 400px;
+    font-family: "Jolly Lodger", system-ui;
+    height: 350px;
     z-index: 1;
     position: relative;
-    color: white;
+    color: rgb(0, 0, 0);
+}
+#mission h2{
+    font-size: 2.5rem;
+    font-weight: 100;
 }
 
 #mission::before {
@@ -103,7 +110,7 @@
     position: absolute;
     top: 0;
     left: 0;
-    height: 400px;
+    height: 350px;
     width: 100%;
     background: linear-gradient(to bottom right, rgb(124, 80, 80), #ffffff);
     opacity: 0.5;
@@ -113,19 +120,25 @@
 .card {
     display: inline-block;
     border: 2px solid black;
-    width: 30%;
-    height: 300px;
+    width: 25%;
+    height: 200px;
     margin: 10px 20px;
+    border-radius: 10px;
+}
+.card p{
+    color: black;
+    padding: 20px;
+    font-family: "Jolly Lodger", system-ui;
 }
 .card-box{
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
 }
 .card-img{
-      height: 100px;
+      height: 120px;
       padding: 0 14px;
-      filter: invert();
+      /* filter: invert(1); */
 }
 .card-img img{
     height: inherit;

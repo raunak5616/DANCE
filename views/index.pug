@@ -8,42 +8,54 @@ html(lang="en")
     nav#navbar
       ul
         div#logo
-          img(src="../static/img/logo.png", alt="Logo")
+          img(src="/static/img/logo.png", alt="Logo")
           span Dance Academy
-        li #[a(herf="/") Home]
-        li #[a(herf="/") About]
-        li #[a(herf="/") Contact]
-        li #[a(herf="/") Login]
+        li 
+          a(href="/") Home
+        li 
+          a(href="/about") About
+        li 
+          a(href="/contact") Contact
+        li 
+          a(href="/login") Login
+    hr
 
     section#introsection
-      div JOIN NOW THE NEW DANCE ACCADEMY
+      div JOIN NOW THE NEW DANCE ACADEMY
       div Dance is a way to express yourself
+    hr
 
     section#mission
       h2 Our Mission
 
       .card 
-        p Our mission is to provide a platform for dancers
+        p HIP-HOP
         .card-box
           .card-img
-            img(src="../static/img/pic1.webp", alt="error")
+            img(src="/static/img/pic1.webp", alt="HIP-HOP")
+          .card-content
+            p THIS IS THE BEST DANCE ACADEMY
 
       .card 
-        p Our mission is to provide a platform for dancers
+        p CLASSICAL
         .card-box
           .card-img
-            img(src="../static/img/pic2.jpg", alt="error")
+            img(src="/static/img/pic3.png", alt="CLASSICAL")
+          .card-content
+            p THIS IS THE BEST DANCE ACADEMY
 
       .card 
-        p Our mission is to provide a platform for dancers
+        p BIG-BANG
         .card-box
           .card-img
-            img(src="../static/img/pic3.jpg", alt="error")
+            img(src="/static/img/images (1).png", alt="BIG-BANG")
+          .card-content
+            p THIS IS THE BEST DANCE ACADEMY
 
     section#sponsor
-      | Section for sponsor
+      p Section for sponsor
 
     footer#footer
-      | Our footer is here
+      p Our footer is here
 
     script(src="/static/script.js")
