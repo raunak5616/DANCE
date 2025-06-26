@@ -36,7 +36,7 @@
     gap: 20px;
     padding: 10px 30px;
     background-color: #737070;
-    
+   
 }
 
 #navbar ul li {
@@ -47,17 +47,18 @@
 #navbar ul li a {
     font-size: 18px;
     text-decoration: none;
-    padding: 10px 40px;
+    padding: 2px 40px;
     font-weight: bold;
-    color: white;
+    border-radius: 10px;
+     color: white;
 }
 
-#navbar ul li:hover {
+#navbar ul li a:hover {
     background-color: #fdfdfd;
     color: black;
-    border-radius: 10px;
-    transform: scale(1.2);
+   font-size: 120%;
     cursor: pointer;
+    transition: all 0.8s ease-in-out;
 }
 
 #introsection {
@@ -112,7 +113,7 @@
     left: 0;
     height: 350px;
     width: 100%;
-    background: linear-gradient(to bottom right, rgb(124, 80, 80), #ffffff);
+    background: linear-gradient(to top , rgb(255, 255, 255), #000000);
     opacity: 0.5;
     z-index: -1;
 }
@@ -122,8 +123,9 @@
     border: 2px solid black;
     width: 25%;
     height: 200px;
-    margin: 10px 20px;
+    margin: 10px 40px;
     border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 .card p{
     color: black;
@@ -143,15 +145,62 @@
 .card-img img{
     height: inherit;
 }
-
-#sponsor {
-    background-color: red;
-    border: 2px solid yellow;
-    height: 500px;
+.card:hover{
+    transform: scale(1.2);
+    transition: all 0.8s ease-in-out;
+    cursor: pointer;
 }
 
+#sponsor {
+    position: relative;
+    height: 200px;
+}
+#sponsor::before{
+    content: "";
+    height: 200px;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: linear-gradient(to top , rgb(0, 0, 0), #ffffff);
+    z-index: -1;
+    opacity: 0.8;
+}
+.sponsors {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.sponsors img {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    margin-top: 10px;
+}
+.sponsors img:hover {
+    transform: scale(1.1);
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+}
+#sponsor h2{
+    text-align: center;
+    font-family: "Jolly Lodger", system-ui;
+    font-weight: 400;
+    font-size: 2rem;
+    color: black;
+    margin-top: 5px;
+}
 footer {
-    background-color: blue;
-    border: 2px solid brown;
-    height: 500px
+    background-color: #737070;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    height: 50px
+}
+.fa-brands, .fab {
+    margin: 10px;
+    font-weight: 400;
 }
