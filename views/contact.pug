@@ -1,0 +1,56 @@
+extends base.pug
+
+block scripts 
+  script(src="../static/script.js")
+
+block styles 
+  link(rel="stylesheet", href="../static/style.css")
+  link(rel="stylesheet", href="../static/contact.css")
+  link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css")
+
+
+block content
+  nav#navbar
+    ul
+      div#logo
+        img(src="/static/img/logo.png", alt="Logo")
+        span Dance Academy
+      li 
+        a(href="/") Home
+      li 
+        a(href="/about") About
+      li 
+        a(href="/contact") Contact
+      li 
+        a(href="/login") Login
+  hr
+
+  #container 
+    h2 Contact Us 
+    form(action="/contact", method="POST")
+      .form-group 
+        label(for="name") NAME 
+        input(type="text", id="name", name="name", placeholder="Enter your name", required)
+      .form-group 
+        label(for="email") EMAIL 
+        input(type="email", id="email", name="email", placeholder="Enter your email", required)     
+      .form-group           
+        label(for="message") MESSAGE 
+        textarea(id="message", name="message", placeholder="Enter your message", required)
+      .form-group
+            button.btn(type="submit") SEND MESSAGE
+//- indentation error
+h3 Contact Information
+    p 
+        i.fas.fa-envelope
+        |  Email: 
+        a(href="mailto:raunakkh8789@gmail.com") raunakkh8789@gmail.com
+
+    p Follow us on:
+    .social-icons
+        a(href="https://www.facebook.com/raunak.acon", target="_blank", rel="noopener noreferrer")
+            i.fab.fa-facebook
+        a(href="https://www.instagram.com", target="_blank", rel="noopener noreferrer")
+            i.fab.fa-instagram
+        a(href="https://www.twitter.com", target="_blank", rel="noopener noreferrer")
+            i.fab.fa-twitter

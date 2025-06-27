@@ -14,8 +14,11 @@ app.set('view engine', 'pug')
 app.set('views', path.join(__dirname,'views'))
 
 app.get('/', (req, res) => {
-  res.status(200).render('index',{'title': 'hey'});
+  res.status(200).render('home');
 });
+app.get('/contact',(req, res)=>{
+  res.status(200).render('contact');
+})
 // start port listen
 app.listen(port, ()=>{
     console.log(`this is listenitng port ${port}`)

@@ -1,12 +1,10 @@
-doctype html
-html(lang="en")
-  head
-    title #{title}
-    link(rel="stylesheet", href="/static/style.css")
-    link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css")
+extends base.pug
 
-
-  body
+block scripts 
+    script(src="../static/script.js")
+block styles
+    link(rel="stylesheet", href="../static/style.css")
+block content
     nav#navbar
       ul
         div#logo
@@ -62,12 +60,3 @@ html(lang="en")
         img(src="../static/img/reddit-6615447_1280.webp", alt="error")
         img(src="../static/img/windows-310290_1280.webp", alt="error")
         img(src="../static/img/skype.webp", alt="error")
-
-    footer#footer
-      | Copyright &copy 2025 Raunak. All rights reserved.
-      a(href="https://www.facebook.com/raunak.acon?mibextid=ZbWKwL", target="_blank", rel="noopener noreferrer")
-       i.fab.fa-facebook
-
-
-
-    script(src="/static/script.js")
