@@ -8,7 +8,6 @@ block styles
   link(rel="stylesheet", href="../static/contact.css")
   link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css")
 
-
 block content
   nav#navbar
     ul
@@ -38,19 +37,19 @@ block content
         label(for="message") MESSAGE 
         textarea(id="message", name="message", placeholder="Enter your message", required)
       .form-group
-            button.btn(type="submit") SEND MESSAGE
-//- indentation error
-h3 Contact Information
-    p 
-        i.fas.fa-envelope
-        |  Email: 
-        a(href="mailto:raunakkh8789@gmail.com") raunakkh8789@gmail.com
+        button.btn(type="submit") SEND MESSAGE
 
+    h3 Contact Information
+    p 
+      i.fas.fa-envelope
+      |  Email: 
+      a(href="mailto:raunakkh8789@gmail.com", style= "color:rgb(255, 255, 255); font-size: 24px;text-decoration: none;") raunakkh8789@gmail.com 
+      
     p Follow us on:
     .social-icons
-        a(href="https://www.facebook.com/raunak.acon", target="_blank", rel="noopener noreferrer")
-            i.fab.fa-facebook
-        a(href="https://www.instagram.com", target="_blank", rel="noopener noreferrer")
-            i.fab.fa-instagram
-        a(href="https://www.twitter.com", target="_blank", rel="noopener noreferrer")
-            i.fab.fa-twitter
+      a(href="https://www.facebook.com/raunak.acon", target="_blank", rel="noopener noreferrer")
+        i.fab.fa-facebook
+      a(href="https://www.instagram.com", target="_blank", rel="noopener noreferrer")
+        i.fab.fa-instagram
+      a(href="https://www.twitter.com", target="_blank", rel="noopener noreferrer")
+        i.fab.fa-twitter
