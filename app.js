@@ -1,5 +1,7 @@
 const express= require('express')
 const path = require('path')
+const mongoose = require('mongoose')
+mongoose.connect('mongodb://localhost:27017/dance', {useNewUrlParser: true, useUnifiedTopology: true})
 const app = express()
 const port = 80
 
