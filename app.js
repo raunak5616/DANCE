@@ -5,7 +5,15 @@ mongoose.connect('mongodb://localhost:27017/dance', {useNewUrlParser: true, useU
 const app = express()
 const port = 80
 
+// mongoose specify stuff
+const contact =  new Schema({
+  name: String,
+  email: String,
+  phone: String,
+  message: String
+});
 
+const Model = mongoose.model('contact', contact);
 
 // express specify stuff
 app.use('/static', express.static('static'))
