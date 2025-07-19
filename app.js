@@ -6,7 +6,7 @@ const app = express()
 const port = 80
 
 // mongoose specify stuff
-const contact =  new Schema({
+const contact =  new mongoose.Schema({
   name: String,
   email: String,
   phone: String,
@@ -29,6 +29,14 @@ app.get('/', (req, res) => {
 app.get('/contact',(req, res)=>{
   res.status(200).render('contact');
 })
+app.post('/contact',(req, res)=>{
+  var myData = new Model(req.body);
+  myData.save().then(()=>{
+    res.send('this is saved in database');
+}).catch(()=>{
+    res.status(400).send('this is not saved in database');
+});
+});
 // start port listen
 app.listen(port, ()=>{
     console.log(`this is listenitng port ${port}`)
