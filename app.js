@@ -1,9 +1,11 @@
 const express= require('express')
 const path = require('path')
 const mongoose = require('mongoose')
-mongoose.connect('mongodb://localhost:27017/dance', {useNewUrlParser: true, useUnifiedTopology: true})
+mongoose.connect("mongodb://localhost:27017/test")
+    .then(() => console.log("MongoDB connected"))
+    .catch(err => console.log(err));
 const app = express()
-const port = 80
+const port = 8000
 
 // mongoose specify stuff
 const contact =  new mongoose.Schema({
@@ -28,6 +30,9 @@ app.get('/', (req, res) => {
 });
 app.get('/contact',(req, res)=>{
   res.status(200).render('contact');
+})
+app.get('/about',(req, res)=>{
+  res.status(200).render('about');
 })
 app.post('/contact',(req, res)=>{
   var myData = new Model(req.body);

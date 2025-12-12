@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Jolly+Lodger&family=Playwrite+DK+Loopet:wght@100..400&family=Tagesschrift&display=swap');
+/* GOOGLE FONTS */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
 
 * {
     margin: 0;
@@ -7,92 +8,148 @@
 }
 
 body {
-
-    background-color: #f4f4f4;
-
+    background: #f6f8fb;
+    font-family: "Poppins", sans-serif;
 }
 
-#container {
+/* WRAPPER */
+#contact-wrapper {
     display: flex;
-    border: 2px solid #737070;
-    flex-direction: column;
-    align-items: center;
     justify-content: center;
-    padding: 20px;
-    height: 87vh;
-    width: 100%;
-    font-family: "Jolly Lodger", system-ui;
+    align-items: flex-start;
+    gap: 40px;
+    padding: 60px 40px;
 }
 
-#container::before {
-    content: "";
-    position: absolute;
-    background: linear-gradient(to bottom, rgb(255, 255, 255), #000000);
-    width: 100%;
-    height: 100%;
-    opacity: 0.8;
-    z-index: -1;
+/* CONTACT FORM BOX */
+.contact-box {
+    width: 50%;
+    background: #ffffff;
+    padding: 35px;
+    border-radius: 18px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+    border: 1px solid #e6e6e6;
+    backdrop-filter: blur(10px);
 }
 
+.contact-box h2 {
+    font-size: 32px;
+    font-weight: 600;
+    margin-bottom: 25px;
+    color: #222;
+}
+
+/* FORM */
 form {
     display: flex;
     flex-direction: column;
-    width: 50%;
-    background-color: #fff;
-    padding: 20px;
-    border: 2px solid #737070;
+    gap: 18px;
 }
 
-.form-group {
-    margin: 10px 0;
-    width: 100%;
-    text-align: center;
-    font-size: 24px;
+/* FORM GROUP */
+.form-group label {
+    font-weight: 500;
+    margin-bottom: 6px;
+    display: block;
+    color: #333;
 }
 
 .form-group input,
-textarea {
+.form-group textarea {
     width: 100%;
-    padding: 10px;
-    border: 1px solid #737070;
-    border-radius: 5px;
+    padding: 12px 15px;
+    border: 1px solid #dcdcdc;
+    border-radius: 10px;
     font-size: 16px;
+    background: #fefefe;
+    transition: 0.25s ease;
 }
 
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.2);
+}
+
+/* TEXTAREA */
+textarea {
+    height: 140px;
+    resize: none;
+}
+
+/* BUTTON */
 .btn {
-    font-family: "Jolly Lodger", system-ui;
-    padding: 10px 20px;
-    font-size: 1.3rem;
-    background-color: rgb(72 67 67);
-    color: white;
-    border-radius: 10px;
+    padding: 14px;
+    font-size: 18px;
     border: none;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    transition: 0.3s;
+    border-radius: 10px;
+    background: #0066ff;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s ease;
 }
 
 .btn:hover {
+    background: #0051cc;
+    transform: translateY(-3px);
+}
+
+/* INFO BOX */
+.info-box {
+    width: 30%;
+    background: white;
+    padding: 30px;
+    border-radius: 18px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+    border: 1px solid #e6e6e6;
+}
+
+.info-box h3 {
+    font-size: 26px;
+    margin-bottom: 15px;
+    color: #111;
+}
+
+.info-box p {
+    font-size: 16px;
+    margin: 12px 0;
+    color: #555;
+}
+
+.info-box i {
+    color: #0066ff;
+    margin-right: 10px;
+}
+
+/* SOCIAL ICONS */
+.social-icons {
+    margin-top: 15px;
+    display: flex;
+    gap: 18px;
+}
+
+.social-icons i {
+    font-size: 28px;
+    color: #0066ff;
+    transition: 0.3s ease;
     cursor: pointer;
-    transition: 0.3s;
-    font-size: 1.6rem;
 }
 
-.contact-info {
-    margin-top: 20px;
-    font-weight: 100;
-    text-align: center;
-    font-size: 24px;
-    width: 100%;
-    color: #ffffff;
+.social-icons i:hover {
+    transform: scale(1.2);
+    color: #003d99;
 }
 
-.contact-info a {
-    text-decoration: none;
-    color: #ffffff;
-}
+/* RESPONSIVE */
+@media(max-width: 900px) {
+    #contact-wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
 
-.fa-brands,
-.fab {
-    color: #ffffff;
-
+    .contact-box,
+    .info-box {
+        width: 90%;
+    }
 }

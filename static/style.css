@@ -1,224 +1,267 @@
-@import url('https://fonts.googleapis.com/css2?family=Jolly+Lodger&family=Playwrite+DK+Loopet:wght@100..400&family=Tagesschrift&display=swap');
 
-* {
-    margin: 0px;
-    padding: 0px;
-    box-sizing: border-box;
-}
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Bebas+Neue&display=swap');
 
-#navbar {
-    width: 100%;
-}
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
 
-#logo {
+    body {
+        font-family: "Poppins", sans-serif;
+        background: #fdfdfd;
+        color: #222;
+        overflow-x: hidden;
+    }
+
+    /* ================= NAVBAR ================= */
+    #navbar {
+        width: 100%;
+        background: #fff;
+        padding: 18px 50px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: sticky;
+        top: 0;
+        z-index: 200;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    }
+
+    #logo {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+    }
+
+    #logo img {
+        height: 50px;
+    }
+
+    #logo span {
+        font-size: 24px;
+        font-weight: 700;
+        color: #2563eb;
+    }
+
+    #navbar ul {
+        display: flex;
+        gap: 25px;
+    }
+
+    #navbar li {
+        list-style: none;
+    }
+
+    #navbar a {
+        font-size: 15px;
+        padding: 8px 14px;
+        font-weight: 500;
+        text-decoration: none;
+        color: #222;
+        border-radius: 8px;
+        transition: 0.3s ease;
+    }
+
+    #navbar a:hover {
+        background: #2563eb;
+        color: white;
+    }
+
+    /* ================= HERO ================= */
+    #hero {
+        height: 550px;
+        background: url('../static/img/dance.jpg') center/cover no-repeat;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+    }
+
+    #hero::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: rgba(0,0,0,0.35);
+    }
+
+    .hero-content {
+        position: relative;
+        text-align: center;
+        z-index: 3;
+        color: white;
+    }
+
+    .hero-content h1 {
+        font-family: "Bebas Neue", sans-serif;
+        font-size: 70px;
+        letter-spacing: 3px;
+        margin-bottom: 15px;
+        text-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+    }
+
+    .hero-content p {
+        font-size: 22px;
+        margin-bottom: 30px;
+        min-height: 28px;
+        text-shadow: 1px 1px 5px rgba(0,0,0,0.5);
+    }
+
+    .hero-btn {
+        padding: 15px 50px;
+        background: #2563eb;
+        font-size: 18px;
+        font-weight: 600;
+        border-radius: 10px;
+        color: white;
+        text-decoration: none;
+        transition: 0.3s ease;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .hero-btn::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 0;
+        height: 300%;
+        background: rgba(255,255,255,0.2);
+        transform: translate(-50%, -50%) rotate(45deg);
+        transition: 0.5s ease;
+    }
+
+    .hero-btn:hover::after {
+        width: 250%;
+    }
+
+    .hero-btn:hover {
+        background: #1e4fcc;
+    }
+
+    /* ================= SECTIONS ================= */
+    section {
+        padding: 80px 50px;
+    }
+
+    .section-title {
+        text-align: center;
+        font-size: 42px;
+        font-weight: 700;
+        margin-bottom: 60px;
+        color: #111;
+        position: relative;
+    }
+
+    .section-title::after {
+        content: "";
+        width: 60px;
+        height: 4px;
+        background: #2563eb;
+        display: block;
+        margin: 20px auto 0;
+        border-radius: 2px;
+    }
+
+    /* ================= DANCE CARDS ================= */
+   .cards-container {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 60px;
+    justify-content: center;  /* center all cards horizontally */
+    align-items: stretch;     /* make all cards equal height */
+    flex-wrap: wrap;
+    gap: 40px;
 }
 
-#logo img {
-    height: 50px;
-    width: 50px;
-    border-radius: 50%;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-}
 
-#logo span {
-    margin: 0 20px;
-    font-family: "Jolly Lodger", system-ui;
-    font-weight: lighter;
-    font-size: 24px;
-    color: white;
-    text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
-}
-
-#navbar ul {
-    display: flex;
-    height: 50px;
-    align-items: center;
-    gap: 20px;
-    padding: 10px 30px;
-    background-color: #737070;
-
-}
-
-#navbar ul li {
-    list-style: none;
-    transition: all 0.8s ease-in-out;
-}
-
-#navbar ul li a {
-    font-size: 18px;
-    text-decoration: none;
-    padding: 2px 40px;
-    font-weight: bold;
-    border-radius: 10px;
-    color: white;
-}
-
-#navbar ul li a:hover {
-    background-color: #fdfdfd;
-    color: black;
-    font-size: 120%;
-    cursor: pointer;
-    transition: all 0.8s ease-in-out;
-}
-
-#introsection {
-    position: relative;
+    .card {
+         flex: 1 1 300px;  /* grow/shrink, base width 300px */
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 400px;
-    width: 100%;
-    color: black;
-    /* or any dark color */
-    z-index: 1;
-    font-size: 5rem;
-    font-family: "Jolly Lodger", system-ui;
-    font-weight: 400;
-    font-style: normal;
-}
+    justify-content: flex-start;
+        background: rgba(255, 255, 255, 0.2);
+        border-radius: 20px;
+        padding: 25px;
+        text-align: center;
+        backdrop-filter: blur(15px);
+        border: 1px solid rgba(255,255,255,0.3);
+        box-shadow: 0 8px 30px rgba(0,0,0,0.1);
+        width: 300px;
+        cursor: pointer;
+        transition: transform 0.4s ease, box-shadow 0.4s ease;
+        opacity: 0;
+        transform: translateY(50px);
+    }
 
-#introsection::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    background: url('../static/img/dance.jpg') no-repeat center center / cover;
-    opacity: 0.6;
-    z-index: -1;
-}
+    .card {
+        opacity: 1;
+        transform: translateY(0);
+    }
 
-#mission {
-    font-size: 1.5rem;
-    font-weight: 100;
-    padding: 12px;
-    text-align: center;
-    font-family: "Jolly Lodger", system-ui;
-    height: 350px;
-    z-index: 1;
-    position: relative;
-    color: rgb(0, 0, 0);
-}
+    .card:hover {
+        transform: translateY(-15px) scale(1.05);
+        box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+    }
 
-#mission h2 {
-    font-size: 2.5rem;
-    font-weight: 100;
-}
+    .card img {
+        width: 100%;
+        height: 220px;
+        object-fit: contain;
+       
+        transition: transform 0.4s ease;
+    }
 
-#mission::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 350px;
-    width: 100%;
-    background: linear-gradient(to top, rgb(255, 255, 255), #000000);
-    opacity: 0.5;
-    z-index: -1;
-}
+    .card:hover img {
+        transform: scale(1.07);
+    }
 
-.card {
-    display: inline-block;
-    border: 2px solid black;
-    width: 25%;
-    height: 200px;
-    margin: 10px 40px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-}
+    .card h3 {
+        font-size: 1.7rem;
+        font-weight: 700;
+        margin-top: 15px;
+    }
 
-.card p {
-    color: black;
-    padding: 20px;
-    font-family: "Jolly Lodger", system-ui;
-}
+    .card p {
+        font-size: 1rem;
+        color: #333;
+        margin-top: 10px;
+    }
 
-.card-box {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+    /* ================= SPONSORS ================= */
+    #sponsors {
+        background: #f5f5f5;
+        text-align: center;
+    }
 
-.card-img {
-    height: 120px;
-    padding: 0 14px;
-    /* filter: invert(1); */
-}
+    .sponsor-logos {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 50px;
+        flex-wrap: wrap;
+    }
 
-.card-img img {
-    height: inherit;
-}
+    .sponsor-logos img {
+        height: 70px;
+        width: auto;
+        opacity: 0.9;
+        transition: transform 0.3s ease, opacity 0.3s ease;
+    }
 
-.card:hover {
-    transform: scale(1.2);
-    transition: all 0.8s ease-in-out;
-    cursor: pointer;
-}
+    .sponsor-logos img:hover {
+        opacity: 1;
+        transform: scale(1.12);
+    }
 
-#sponsor {
-    position: relative;
-    height: 200px;
-}
+    /* ================= FOOTER ================= */
+    footer {
+        background: #ffffff;
+        text-align: center;
+        padding: 30px;
+        font-size: 14px;
+        border-top: 1px solid #eaeaea;
+        color: #666;
+    }
 
-#sponsor::before {
-    content: "";
-    height: 200px;
-    width: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    background: linear-gradient(to top, rgb(0, 0, 0), #ffffff);
-    z-index: -1;
-    opacity: 0.8;
-}
 
-.sponsors {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 20px;
-}
-
-.sponsors img {
-    height: 100px;
-    width: 100px;
-    border-radius: 50%;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    margin-top: 10px;
-}
-
-.sponsors img:hover {
-    transform: scale(1.1);
-    transition: all 0.3s ease-in-out;
-    cursor: pointer;
-}
-
-#sponsor h2 {
-    text-align: center;
-    font-family: "Jolly Lodger", system-ui;
-    font-weight: 400;
-    font-size: 2rem;
-    color: black;
-    margin-top: 5px;
-}
-
-footer {
-    background-color: #737070;
-    color: white;
-    text-align: center;
-    padding: 10px;
-    height: 50px
-}
-
-.fa-brands,
-.fab {
-    margin: 10px;
-    font-weight: 400;
-}

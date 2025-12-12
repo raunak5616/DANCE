@@ -22,34 +22,36 @@ block content
         a(href="/contact") Contact
       li 
         a(href="/login") Login
-  hr
+  
+  section#contact-wrapper
+    .contact-box
+      h2 Get in Touch
+      
+      form(action="/contact", method="POST")
+        .form-group
+          label(for="name") Your Name
+          input(type="text", id="name", name="name", placeholder="Enter your name", required)
 
-  #container 
-    h2 Contact Us 
-    form(action="/contact", method="POST")
-      .form-group 
-        label(for="name") NAME 
-        input(type="text", id="name", name="name", placeholder="Enter your name", required)
-      .form-group 
-        label(for="email") EMAIL 
-        input(type="email", id="email", name="email", placeholder="Enter your email", required)     
-      .form-group           
-        label(for="message") MESSAGE 
-        textarea(id="message", name="message", placeholder="Enter your message", required)
-      .form-group
-        button.btn(type="submit") SEND MESSAGE
+        .form-group
+          label(for="email") Email Address
+          input(type="email", id="email", name="email", placeholder="Enter your email", required)
 
-    h3 Contact Information
-    p 
-      i.fas.fa-envelope
-      |  Email: 
-      a(href="mailto:raunakkh8789@gmail.com", style= "color:rgb(255, 255, 255); font-size: 24px;text-decoration: none;") raunakkh8789@gmail.com   
-    p Follow us on:
-    .social-icons
-      a(href="https://www.facebook.com/raunak.acon", target="_blank", rel="noopener noreferrer")
-        i.fab.fa-facebook
-      a(href="https://www.instagram.com", target="_blank", rel="noopener noreferrer")
-        i.fab.fa-instagram
-      a(href="https://www.twitter.com", target="_blank", rel="noopener noreferrer")
-        i.fab.fa-twitter
-    
+        .form-group
+          label(for="message") Your Message
+          textarea(id="message", name="message", placeholder="Write your message...", required)
+
+        button.btn(type="submit") Send Message
+
+    .info-box
+      h3 Contact Information
+      p 
+        i.fas.fa-envelope
+        |  raunakkh8789@gmail.com
+      p Social Links
+      .social-icons
+        a(href="https://www.facebook.com/raunak.acon", target="_blank")
+          i.fab.fa-facebook
+        a(href="https://www.instagram.com", target="_blank")
+          i.fab.fa-instagram
+        a(href="https://www.twitter.com", target="_blank")
+          i.fab.fa-twitter

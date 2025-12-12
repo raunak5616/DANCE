@@ -1,0 +1,104 @@
+//- about.pug
+extends base.pug
+
+block styles
+   link(rel="stylesheet", href="../static/about.css")
+ 
+block content
+  nav#navbar
+    ul
+      li#logo
+        img(src="/static/img/logo.png", alt="Logo")
+        span Dance Academy
+      li
+        a(href="/") Home
+      li
+        a(href="/about") About
+      li
+        a(href="/contact") Contact
+      li
+        a(href="/login") Login
+
+  //- HERO
+  section#hero-about
+    .hero-content-about
+      h1 About Us
+      p "Discover our journey, mission, values, and passionate instructors who make Dance Academy special."
+
+  //- MISSION & VALUES
+  section#mission
+    h2.section-title Our Mission & Vision
+    .mission-container
+      .mission-card
+        h3 Mission
+        p "Inspire and nurture a love for dance, building confidence, creativity, and skill."
+      .mission-card
+        h3 Vision
+        p "Become a leading dance academy fostering artistry, innovation, and community."
+      .mission-card
+        h3 Values
+        p "Passion, Dedication, Creativity, Inclusivity, Excellence in every step."
+
+  //- TEAM
+  section#team
+    h2.section-title Meet Our Team
+    .team-container
+      .team-card
+        img(src="/static/img/teacher1.jpeg")
+        h4 "Jane Smith"
+        p "Hip-Hop Instructor"
+      .team-card
+        img(src="/static/img/teacher2.jpeg")
+        h4 "Shakira"
+        p "Classical Dance Instructor"
+      .team-card
+        img(src="/static/img/teacher3.jpeg")
+        h4 "Dytto"
+        p "Fusion & Big-Bang Instructor"
+
+  //- STATS / ACHIEVEMENTS
+  section#stats
+    h2.section-title Our Achievements
+    .stats-container
+      .stat-card
+        h3 500+
+        p Students Trained
+      .stat-card
+        h3 120+
+        p Events Organized
+      .stat-card
+        h3 30+
+        p Awards Won
+
+  //- TESTIMONIALS
+  section#testimonials
+    h2.section-title Testimonials
+    .testimonial-container
+      .testimonial-card
+        p "Dance Academy changed my life! The instructors are amazing and motivating."
+        h4 "Riya Sharma"
+      .testimonial-card
+        p "A perfect place to learn and express creativity through dance."
+        h4 "Amit Verma"
+      .testimonial-card
+        p "Friendly environment and excellent training. Highly recommended!"
+        h4 "Sneha Kapoor"
+
+  footer
+    p © 2025 Dance Academy. All rights reserved.
+
+block scripts
+  script.
+     document.addEventListener('DOMContentLoaded', () => {
+      const missionCards = document.querySelectorAll('.mission-card');
+
+      const observerMission = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if(entry.isIntersecting) {
+            entry.target.classList.add('show-card');
+          }
+        });
+      }, { threshold: 0.2 });
+
+      missionCards.forEach(card => observerMission.observe(card));
+    });
