@@ -1,0 +1,41 @@
+extends base.pug
+
+block styles 
+  link(rel="stylesheet", href="../static/style.css")
+  link(rel="stylesheet", href="../static/login.css")
+
+     //- Content block for pages
+block content
+    nav#navbar
+      ul
+        div#logo
+          img(src="/static/img/logo.png", alt="Logo")
+          span Dance Academy
+        li 
+          a(href="/") Home
+        li 
+          a(href="/about") About
+        li 
+          a(href="/contact") Contact
+        li 
+          a(href="/login") Login
+
+        
+    .container
+        h2 Login
+        if error
+        p.error-message= error
+
+        //- Login Form
+        form(action="/login", method="POST")
+        input(type="text", name="username", placeholder="Username", required)
+        input(type="password", name="password", placeholder="Password", required)
+        button(type="submit") Login
+
+        hr
+
+        //- Register Form
+        form(action="/register", method="POST")
+        input(type="text", name="username", placeholder="New Username", required)
+        input(type="password", name="password", placeholder="New Password", required)
+        button(type="submit") Register

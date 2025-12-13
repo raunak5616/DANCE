@@ -255,13 +255,14 @@
     }
 
     /* ================= FOOTER ================= */
-    footer {
-        background: #ffffff;
-        text-align: center;
-        padding: 30px;
-        font-size: 14px;
-        border-top: 1px solid #eaeaea;
-        color: #666;
-    }
+footer {
+    height: 80px;
+    line-height: 80px; /* vertical center text */
+    text-align: center;
+    background: #ffffff;
+    border-top: 1px solid #eaeaea;
+    font-size: 14px;
+    color: #666;
+}
 
 
